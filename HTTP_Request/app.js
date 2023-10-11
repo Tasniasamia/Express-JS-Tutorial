@@ -11,7 +11,8 @@ app.use('/api/user',useRoute)
 app.use('/AddInfo',(req,res)=>{
     res.sendFile(__dirname+"/View/index.html")
 })
-app.use((req,res)=>{
-    res.send("<h1>Not Found and 404 Page</h1>")
+app.use('*',(req,res)=>{
+    res.send("<h1>Not Found  404 Page</h1>")
 })
+
 module.exports=app
